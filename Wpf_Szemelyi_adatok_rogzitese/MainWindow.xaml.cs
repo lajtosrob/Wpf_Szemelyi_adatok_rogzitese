@@ -88,6 +88,14 @@ namespace Wpf_Szemelyi_adatok_rogzitese
             sw.WriteLine($"{name};{gender};{personHeight};{dateOfBirth}");
 
             sw.Close();
+
+            txtName.Text = "";
+            txtName.Focus();
+            rdoFemale.IsChecked = false;
+            rdoMale.IsChecked = false;
+            sliHeight.Value = 0;
+            datDateOfBirth.Text = "";
+
         }
     }
 
