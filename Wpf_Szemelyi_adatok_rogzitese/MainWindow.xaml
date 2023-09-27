@@ -1,0 +1,58 @@
+﻿<Window x:Class="Wpf_Szemelyi_adatok_rogzitese.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Szemelyi_adatok_rogzitese"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*" />
+
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center">
+            <Label x:Name="lblNev" Content="Neve" FontSize="18" Margin="20"/>
+            <TextBox x:Name="txtName" Width="200" Height="30" FontSize="20" VerticalAlignment="Center" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    Grid.Row="1">
+            <Label Content="Neme" FontSize="18" Margin="20"/>
+            <RadioButton x:Name="rdoFemale" Content="Nő" VerticalAlignment="Center" FontSize="18"/>
+            <RadioButton x:Name="rdoMale" Content="Férfi" VerticalAlignment="Center" FontSize="18"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    Grid.Row="2">
+            <Label Content="Magassága" FontSize="18" Margin="20"/>
+            <Label Content="100" VerticalAlignment="Center"/>
+            <Slider Minimum="140" Maximum="210" Width="180" VerticalAlignment="Center" x:Name="sliHeight" />
+            <Label Content="250" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    Grid.Row="3">
+            <Label Content="Születés dátuma" FontSize="18" Margin="20"/>
+            <DatePicker VerticalAlignment="Center" FontSize="16" x:Name="datDateOfBirth"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    Grid.Row="4">
+            <Button Content="Adat fájlba írása" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    FontSize="20" FontWeight="Bold" Padding="20" x:Name="btnWriteIntoFile" Click="btnWriteIntoFile_Click" />
+        </StackPanel>
+
+    </Grid>
+</Window>
